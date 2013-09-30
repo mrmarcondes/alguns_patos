@@ -10,9 +10,7 @@ gem 'turbolinks'
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 gem 'bson_ext'
 gem 'jbuilder'
-gem 'devise'
-gem "devise-async"
-gem 'asset_sync'
+#gem 'devise'
 
 group :staging, :production do
   gem 'unicorn'
