@@ -7,10 +7,8 @@ gem 'rails', '4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'turbolinks-redirect'
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 gem 'bson_ext'
-gem 'omniauth-facebook'
 gem 'jbuilder'
 gem 'devise'
 gem "devise-async"
@@ -22,16 +20,11 @@ group :staging, :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'guard-jasmine'
-  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
-  gem 'jasmine-jquery-rails'
 end
 
 group :test do
+  gem 'factory_girl_rails'
   gem 'faker'
-  gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
   gem 'simplecov'
