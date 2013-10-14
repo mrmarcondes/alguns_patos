@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require libs/bootstrap.min
+//= require libs/jquery-ui-1.10.0.custom.min
+//= require libs/jquery.ui.touch-punch.min
 //= require_tree .
