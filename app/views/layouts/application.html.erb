@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Src</title>
+  <title>Pesquisa</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </head>
-<body>
+<body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 
-<%= yield %>
+<%= render "layouts/topbar" %>
+<%= render "layouts/subnav_menu" %>
 
+<div class="main">
+    <div id="notifications">
+      <% if notice %>
+        <p data-type="success"><%= notice %></p>
+      <% end %>
+
+      <% if alert %>
+        <p data-type="error"><%= alert %></p>
+      <% end %>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+  </div> <!-- /container -->
+</div> <!-- /main -->
 </body>
 </html>
