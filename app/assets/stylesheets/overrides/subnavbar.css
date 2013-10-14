@@ -1,0 +1,20 @@
+.subnavbar .subnavbar-inner {
+  height: 50px;
+}
+.subnavbar .mainnav {
+  height: 50px;
+}
+
+.subnavbar .mainnav > li {
+  height: 50px;
+}
+
+.subnavbar .mainnav > li > a > i {
+  font-size:18px;
+  margin-top: 6px;
+  margin-bottom: -2px;
+}
+
+.subnavbar {
+  margin-bottom: 20px;
+}

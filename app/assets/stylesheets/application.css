@@ -10,9 +10,9 @@
  *
 *= require_self
 *= require bootstrap.min
-*= require base-admin-3
+*= require base-admin/base-admin-3
 *= require font-awesome.min
 *= require bootstrap-responsive.min
-*= require base-admin-3-responsive
+*= require base-admin/base-admin-3-responsive
 *= require_tree .
 */
