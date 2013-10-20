@@ -11,7 +11,7 @@
 *= require_self
 *= require bootstrap.min
 *= require base-admin/base-admin-3
-*= require font-awesome.min
+*= require font-awesome
 *= require bootstrap-responsive.min
 *= require base-admin/base-admin-3-responsive
 *= require_tree .

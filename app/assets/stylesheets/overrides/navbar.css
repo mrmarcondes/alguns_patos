@@ -1,0 +1,10 @@
+.navbar .navbar-header .navbar-brand {
+  color: #777573;
+  font-weight: 600;
+  position: relative;
+  top: 0;
+}
+
+.navbar .navbar-header .navbar-brand:hover {
+  color: #574431;
+}

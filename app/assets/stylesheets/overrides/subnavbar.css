@@ -1,12 +1,22 @@
+.navbar.navbar-inverse {
+  border-bottom: 1px solid #C06007;
+}
+
 .subnavbar .subnavbar-inner {
   height: 50px;
+  background-image: linear-gradient(to bottom, #E96700 0%, #DF7818 100%);
+  border-bottom: 1px solid #AA5922;
 }
 .subnavbar .mainnav {
   height: 50px;
+  border-left: 1px solid #C06007;
+  border-right: 1px solid #DD8A0E;
 }
 
 .subnavbar .mainnav > li {
   height: 50px;
+  border-left: 1px solid #FF8F38;
+  border-right: 1px solid #C06007;
 }
 
 .subnavbar .mainnav > li > a > i {
@@ -17,4 +27,24 @@
 
 .subnavbar {
   margin-bottom: 20px;
+  border-top: 1px solid #E7AF39;
+}
+
+.subnavbar .mainnav > li > a {
+  color: rgba(255, 255, 255, 0.83);
+
+}
+
+.subnavbar .mainnav > li.active > a {
+  background: #924D0D;
+  color: #FFF;
+}
+
+.subnavbar .mainnav > li:hover {
+  background-color: rgba(146, 77, 13, .3);
+  color: #F90;
+}
+
+.subnavbar .mainnav > li > a:hover {
+  color: #fff;
 }
