@@ -1,3 +1,7 @@
 .navbar.navbar-inverse {
   background: #fff;
 }
+
+.navbar-brand {
+  font-size: 26px;
+}
