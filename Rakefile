@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mln::Application.load_tasks
+AlgunsPatos::Application.load_tasks

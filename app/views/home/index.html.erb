@@ -3,66 +3,92 @@
     <div class="widget stacked">
         <div class="widget-header">
           <i class="icon-list-alt"></i>
-          <h3>Criando um orçamento</h3>
+          <h3>Alguns patos e o fodão</h3>
         </div> <!-- /widget-header -->
 
         <div class="widget-content">
-          <ul id="myTab" class="nav nav-tabs">
-            <li class="active">
-              <a href="#home" data-toggle="tab">Produtos</a>
-            </li>
-            <li>
-              <a href="#home" data-toggle="tab">Regionais</a>
-            </li>
-            <li>
-              <a href="#home" data-toggle="tab">Projetistas</a>
-            </li>
-            <li>
-              <a href="#home" data-toggle="tab">Obras</a>
-            </li>
-
-          </ul>
-
-          <div class="tab-content">
-            <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-                    <thead>
-                      <tr>
-                        <th>Código</th>
-                        <th>Descrição</th>
-                        <th>Atualizado em</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1234</td>
-                        <td>Descrição ABC</td>
-                        <td>01/11/2013 14:30</td>
-                      </tr>
-                      <tr>
-                        <td>5678</td>
-                        <td>Descrição DEF</td>
-                        <td>01/11/2013 14:30</td>
-                      </tr>
-                      <tr>
-                        <td>9012</td>
-                        <td>Outra descrição JKLM</td>
-                        <td>01/11/2013 14:30</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Mais uma descrição</td>
-                        <td>01/11/2013 14:30</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div> <!-- /.table-responsive -->
+            <section id="accordions">
+              <div class="panel-group accordion">
+                <div class="panel panel-default open">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent=".accordion" href="#collapseOne">
+                        Ranking
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="tab-content">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th>Nome</th>
+                                <th>Aproveitamento %</th>
+                                <th>Vitórias</th>
+                                <th>Derrotas</th>
+                                <th>Total de partidas</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% @players.each do |player| %>
+                                <tr>
+                                  <td><%= player.name %></td>
+                                  <td><%= Match.percentage_of_wins(player) %></td>
+                                  <td><%= Match.won_matches(player) %></td>
+                                  <td><%= Match.lost_matches(player) %></td>
+                                  <td><%= Match.total_matches(player) %></td>
+                                </tr>
+                              <% end %>
+                            </tbody>
+                          </table>
+                        </div> <!-- /.table-responsive -->
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default open">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo">
+                        Placares
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="tab-content">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th>Placar</th>
+                                <th>Vencedor</th>
+                                <th>Perdedor</th>
+                                <th>Data da partida</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% @matches.each do |match| %>
+                                <tr>
+                                  <td><%= match.score %></td>
+                                  <td><%= match.winner.name %></td>
+                                  <td><%= match.loser.name %></td>
+                                  <td><%= match.match_date %></td>
+                                </tr>
+                              <% end %>
+                            </tbody>
+                          </table>
+                        </div> <!-- /.table-responsive -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-          </div>
-
-
         </div> <!-- /widget-content -->
 
-      </div>
+        </div>
+
   </div>
 </div>
+

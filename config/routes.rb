@@ -1,4 +1,4 @@
-Mln::Application.routes.draw do
+AlgunsPatos::Application.routes.draw do
 
   root "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

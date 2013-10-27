@@ -1,13 +1,13 @@
 test:
   sessions:
     default:
-      database: mln-test
+      database: alguns_patos-test
       hosts:
         - localhost:27017
 development:
   sessions:
     default:
-      database: mln-dev
+      database: alguns_patos-dev
       hosts:
         - localhost:27017
 production:
