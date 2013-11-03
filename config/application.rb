@@ -30,5 +30,11 @@ module AlgunsPatos
     "fontawesome-webfont.svg",
     "fontawesome-webfont.woff")
 
+    config.time_zone = 'Brasilia'
+    config.i18n.available_locales = ["pt-BR"]
+    config.encoding = "utf-8"
+    config.i18n.default_locale = "pt-BR"
+
+
   end
 end
