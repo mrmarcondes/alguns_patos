@@ -55,7 +55,7 @@
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwo" class="panel-collapse collapse">
+                  <div id="collapseTwo" class="panel-collapse collapse in">
                     <div class="panel-body">
                       <div class="tab-content">
                         <div class="table-responsive">
@@ -74,7 +74,7 @@
                                   <td><%= match.score %></td>
                                   <td><%= match.winner.name %></td>
                                   <td><%= match.loser.name %></td>
-                                  <td><%= match.match_date %></td>
+                                  <td><%= l(match.match_date) %></td>
                                 </tr>
                               <% end %>
                             </tbody>
