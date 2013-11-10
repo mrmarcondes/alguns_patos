@@ -8,9 +8,7 @@ class RankingService
                                             lost_matches: lost_matches(player),
                                             total_matches: total_matches(player),
                                             percentage_of_wins: percentage_of_wins(player))
-      puts player_statistic.player.name
       @ranking.push player_statistic
-
     end
 
     self.order_by_percentage_of_wins
