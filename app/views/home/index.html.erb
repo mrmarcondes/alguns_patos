@@ -32,13 +32,13 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <% @players.each do |player| %>
+                              <% @ranking.each do |position| %>
                                 <tr>
-                                  <td><%= player.name %></td>
-                                  <td><%= Match.percentage_of_wins(player) %></td>
-                                  <td><%= Match.won_matches(player) %></td>
-                                  <td><%= Match.lost_matches(player) %></td>
-                                  <td><%= Match.total_matches(player) %></td>
+                                  <td><%= position.player.name %></td>
+                                  <td><%= position.percentage_of_wins %></td>
+                                  <td><%= position.won_matches %></td>
+                                  <td><%= position.lost_matches %></td>
+                                  <td><%= position.total_matches %></td>
                                 </tr>
                               <% end %>
                             </tbody>
