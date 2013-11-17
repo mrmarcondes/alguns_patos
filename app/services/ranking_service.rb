@@ -9,6 +9,8 @@ class RankingService
                                             total_matches: total_matches(player),
                                             percentage_of_wins: percentage_of_wins(player))
       @ranking.push player_statistic
+      puts player_statistic.player.name
+      puts player_statistic.percentage_of_wins
     end
 
     self.order_by_percentage_of_wins
@@ -34,6 +36,6 @@ class RankingService
     end
 
     def self.order_by_percentage_of_wins
-      @ranking.sort!{|x,y| y.percentage_of_wins <=> x.percentage_of_wins}
+      @ranking
     end
 end
